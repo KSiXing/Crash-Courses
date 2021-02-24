@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  */
 
-public class SortingAlgoritms {
+public class SortingAlgorithms {
     public static void main(String[] args) {
         int [] integers = {3, 44, 56, 78, 32, 232, 5, 323, 498, 123, 6, 2, 1, 77, 23, 88};
         Sort s = new InsertionSort(integers);

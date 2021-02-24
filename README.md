@@ -9,7 +9,7 @@ The repository houses codes which can help introduce programming to others.
 
 | Algorithm | File |
 | ---		 	| ----	  |
-| Bubble Sort 	| [Java](./Sorting/SortingAlgorithms.java) |
-| Insertion Sort 	| [Java](./Sorting/SortingAlgorithms.java) |
-| Merge Sort 	| [Java](./Sorting/MergeSortTest.java) |
-| Radix Sort  | [Java](./Sorting/RadixTest.java) |
+| Bubble Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
+| Insertion Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
+| Merge Sort 	| [MergeSortTest](./Sorting/MergeSortTest.java) |
+| Radix Sort  | [RadixTest](./Sorting/RadixTest.java) |
