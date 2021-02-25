@@ -4,7 +4,7 @@ import java.util.Arrays;
  *
  * @author KohSiXing
  *
- * This program tests out various sorting algorithms
+ * This program tests out comparison based iterative algorithms
  *
  */
 
@@ -64,7 +64,7 @@ class BubbleSort extends Sort{
 
 }
 
-class InsertionSort extends Sort{
+class InsertionSort extends Sort {
     private int[] integers;
 
     public InsertionSort(int [] integers) {
@@ -96,6 +96,48 @@ class InsertionSort extends Sort{
 
     private void printStatistics(int comparisons) {
         System.out.println("\n---- Statistics for Insertion Sort ----");
+        System.out.println("Comparisons\t:\t" + comparisons);
+    }
+
+}
+
+class SelectionSort extends Sort{
+    private int [] integers;
+
+    public SelectionSort(int[] integers) {
+        this.integers = integers;
+    }
+
+    @Override
+    public int[] sort() {
+        int n = this.integers.length;
+        int comparison = 0;
+        int pass = 0;
+
+        for(int i = this.integers.length - 1; i >= 1; i--) {
+            int index = i;
+
+            for(int j = 0; j < i; j++) {
+                comparison++;
+                if(integers[j] > integers[index]) {
+                    index = j;
+                }
+            }
+
+            int tmp = integers[index];
+            integers[index] = integers[i];
+            integers[i] = tmp;
+
+            System.out.println("Pass : " + ++pass + "\nMax : " + tmp);
+            System.out.println(Arrays.toString(integers) + "\n");
+        }
+
+        printStatistics(comparison);
+        return integers;
+    }
+
+    private void printStatistics(int comparisons) {
+        System.out.println("\n---- Statistics for Selection Sort ----");
         System.out.println("Comparisons\t:\t" + comparisons);
     }
 

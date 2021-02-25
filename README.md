@@ -11,5 +11,7 @@ The repository houses codes which can help introduce programming to others.
 | ---		 	| ----	  |
 | Bubble Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
 | Insertion Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
-| Merge Sort 	| [MergeSortTest](./Sorting/MergeSortTest.java) |
+| Merge Sort 	| [Comparison_Recursive_Sort](./Sorting/Comparison_Recursive_Sort.java) |
+| Quick Sort 	| [Comparison_Recursive_Sort](./Sorting/Comparison_Recursive_Sort.java) |
 | Radix Sort  | [RadixTest](./Sorting/RadixTest.java) |
+| Selection Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java)	|
