@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class SortingAlgorithms {
     public static void main(String[] args) {
         int [] integers = {3, 44, 56, 78, 32, 232, 5, 323, 498, 123, 6, 2, 1, 77, 23, 88};
-        Sort s = new InsertionSort(integers);
+        Sort s = new SelectionSort(integers);
         integers = s.sort();
 
         System.out.println("\n----- Final Sorted Array -----");
@@ -24,6 +24,11 @@ abstract class Sort {
 }
 
 class BubbleSort extends Sort{
+    /***
+     *
+     * Comparisons made : (n-1) + (n-2) + (n-3) + ... + 2 + 1 = n(n-1) / 2
+     *
+     */
     private int [] integers;
 
     public BubbleSort(int [] integers) {
@@ -80,7 +85,6 @@ class InsertionSort extends Sort {
 
             int j;
             for (j = i - 1; j >= 0 && integers[j] > next; j--) {
-                System.out.println(next + " < " + integers[j]);
                 integers[j + 1] = integers[j];
                 comparison++;
             }
@@ -102,6 +106,13 @@ class InsertionSort extends Sort {
 }
 
 class SelectionSort extends Sort{
+    /***
+     *
+     * Comparisons made : (n-1) + (n-2) + (n-3) + ... + 2 + 1 = n(n-1)/2
+     * Swaps made : (n-1)
+     *
+     */
+
     private int [] integers;
 
     public SelectionSort(int[] integers) {
@@ -112,6 +123,7 @@ class SelectionSort extends Sort{
     public int[] sort() {
         int n = this.integers.length;
         int comparison = 0;
+        int swap = 0;
         int pass = 0;
 
         for(int i = this.integers.length - 1; i >= 1; i--) {
@@ -127,18 +139,20 @@ class SelectionSort extends Sort{
             int tmp = integers[index];
             integers[index] = integers[i];
             integers[i] = tmp;
+            swap++;
 
             System.out.println("Pass : " + ++pass + "\nMax : " + tmp);
             System.out.println(Arrays.toString(integers) + "\n");
         }
 
-        printStatistics(comparison);
+        printStatistics(comparison, swap);
         return integers;
     }
 
-    private void printStatistics(int comparisons) {
+    private void printStatistics(int comparisons, int swaps) {
         System.out.println("\n---- Statistics for Selection Sort ----");
         System.out.println("Comparisons\t:\t" + comparisons);
+        System.out.println("Swaps\t:\t\t" + swaps);
     }
 
 }
