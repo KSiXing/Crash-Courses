@@ -9,7 +9,7 @@
 	- To have the java logo on jupyter, find the kernel folder on the desktop
 	- Add an image named "logo-64x64.png"
 
-------
+
 
 !["R"](./images/R-64x64.png)
 ### R
