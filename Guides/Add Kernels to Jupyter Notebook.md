@@ -1,6 +1,6 @@
 # Add Kernels to .ipynb
 
-!["Java"](./images/Java-64x64.png)
+!["Java"](../images/Java-64x64.png)
 ### Java
 - To run java in Jupyter Notebook
 	- Ensure you have shell from JDK
@@ -11,7 +11,7 @@
 
 
 
-!["R"](./images/R-64x64.png)
+!["R"](../images/R-64x64.png)
 ### R
 - To run R in Jupyter Notebook
 	- Ensure you have R base installed
