@@ -12,7 +12,7 @@ The repository houses codes which can help introduce programming to others.
 ### What is it?
 - Git is a software used for version tracking, as well as collaboration among programmers during software development. 
 
-![GitGuide](./GitGuide.md)
+[GitGuide](./GitGuide.md)
 
 </details>
 
@@ -23,7 +23,7 @@ The repository houses codes which can help introduce programming to others.
 - By default, Jupyter Notebook only runs Python codes
 - In order to run a particular language on Jupyter Notebook, you must first install the necessary interpreter (Java uses jshell so I shall consider it as an interpreter, even though it is considered a compiled language)
 
-![Add Kernels to Jupyter Notebook](./Add%20Kernels%20to%20Jupyter%20Notebook.md)
+[Add Kernels to Jupyter Notebook](./Add%20Kernels%20to%20Jupyter%20Notebook.md)
 
 </details>
 
