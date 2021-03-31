@@ -5,29 +5,28 @@
 - Java is a compiled, Object Oriented Programming (OOP) language
 
 ## Access Modifiers 
-**Private** - Only visible in the class. It is not accessible outside the class.
-**(Default)** - Only visible in the package. It is not accessible by programs outside of the package. If no access modifier is specified, it will be default.
-**Protected** - Visible in the package and subclasses of this class in any package.
-**Public** - Visible to all programs in any package. 
+- **Private** - Only visible in the class. It is not accessible outside the class.
+- **(Default)** - Only visible in the package. It is not accessible by programs outside of the package. If no access modifier is specified, it will be default.
+- **Protected** - Visible in the package and subclasses of this class in any package.
+- **Public** - Visible to all programs in any package. 
 
 ## Object-Oriented Programming (OOP) Principles
 <details>
 <summary>Abstraction</summary>
 
 ### What is it?
-- Abstraction means using simple things to represent complexity. For example, we all know how to eat cordon bleu, but we don’t need to know how to cook it in order to enjoy it.
-- In Java, abstraction means simple things like objects, classes, and variables represent more complex underlying code and data. This prevents the codes from repeating the same work multiple times. 
+- Abstraction means using simple things to represent complexity. Only essential attributes are visible to other classes, and the rest are kept private
 
 ### How it works 
 - Abstraction as an OOP concept in Java works by letting programmers create useful, reusable tools. 
-- For instance, a class of variable might be a student. The class might specify that each student object shall have a name, faculty, year, and contact number. The objects, in this case, might be science students, art students, or computing students etc.
+- For instance, we have a Module and a Student class. A module can have many students. The lecturer in charge of the module may only need to know the name of the students, he does not need to know what other module that student is enrolled in as well. As such, we can specify a Student::getName() method in the Student class in the Module class. The module class should not be able to access all other attributes pertaining to the Student class like his age, personal details or the other modules he is doing
 </details>
 
 <details>
 <summary>Encapsulation</summary>
 
 ### What is it?
-This is the practice of keeping fields within a class private, then providing access to them via public methods. It’s a protective barrier that keeps the data and code safe within the class itself. This way, we can re-use objects like code components or variables without allowing open access to the data system-wide.
+This is the practice of keeping fields within a class private, then providing access to them via public methods. It’s ensures the confidentiality of the attributes within the class itself. 
 
 </details>
 
@@ -36,10 +35,10 @@ This is the practice of keeping fields within a class private, then providing ac
 <summary>Inheritance</summary>
 
 ### What is it?
-It lets programmers create new classes that share some of the attributes of existing classes. This lets us build on previous work without reinventing the wheel.
+It lets programmers create new classes that share some of the attributes of existing classes. 
 
 ### How it works 
-It works by letting a new class adopt the properties of another. We call the inheriting class a subclass or a child class. The original class is often called the parent. We use the keyword extends to define a new class that inherits properties from an old class.
+It allow the new class to inherit the properties of their parent. We call the inherting class a subclass or a child class. The super class is also known as the parent. We use the keyword extends to define a child class that inherits properties from a parent class.
 
 </details>
 
@@ -53,11 +52,11 @@ This Java OOP concept lets programmers use the same word to mean different thing
 </details>
 
 ## S.O.L.I.D Principle (5 Principles of Object Oriented Design)
-**S**ingle Responsibility Principle
-**O**pen Close Principle
-**L**iskov Substitution Principle
-**I**nterface Segregation Principle
-**D**ependency Inversion Principle
+- **S**ingle Responsibility Principle
+- **O**pen Close Principle
+- **L**iskov Substitution Principle
+- **I**nterface Segregation Principle
+- **D**ependency Inversion Principle
 
 ## (Method) Overriding vs Overloading
 - Method overriding occurs when a function in a **child class** overrides the same function in its **parent class**. 
