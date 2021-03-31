@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>temp-160793211526301800</title>
+<title>temp-161717061860262676</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13143,7 +13143,7 @@ div#notebook {
 <li>You can download Python from: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
 <li>Some recommended IDE: </li>
 </ul>
-<p><a href="https://www.jetbrains.com/pycharm/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/PyCharm_Logo.svg/1024px-PyCharm_Logo.svg.png" alt="pycharm" style="width: 100px; float:left; display:inline; margin-left: 10%; margin-top: 1%"/></a></p>
+<p><a href="https://www.jetbrains.com/pycharm/"><img src="https://blog.jetbrains.com/wp-content/uploads/2019/08/logo-2.png" alt="pycharm" style="width: 100px; float:left; display:inline; margin-left: 10%; margin-top: 1%"/></a></p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" alt="pycharm" style="width: 100px; float:left; display:inline; margin-left: 10%;"></p>
 
 </div>
@@ -13162,13 +13162,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Imperative Style</span>
 <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
     
 <span class="n">result</span>
 </pre></div>
@@ -13183,7 +13184,23 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+6
+24
+120
+720
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[73]:</div>
 
 
 
@@ -13259,6 +13276,39 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -13313,6 +13363,70 @@ range(1, 10)  :  &lt;class &#39;range&#39;&gt;
 {1: &#39;one&#39;, 2: &#39;two&#39;, 3: &#39;three&#39;}  :  &lt;class &#39;dict&#39;&gt;
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello &quot;</span><span class="p">,</span><span class="mi">1234</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello  1234
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.5</pre>
+</div>
+
 </div>
 
 </div>
@@ -13383,6 +13497,79 @@ range(1, 10)  :  &lt;class &#39;range&#39;&gt;
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">intlist</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">intlist</span><span class="p">:</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">a</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13394,7 +13581,7 @@ range(1, 10)  :  &lt;class &#39;range&#39;&gt;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;The quick brown fox jumps over the lazy dog&quot;</span>
@@ -13414,7 +13601,7 @@ range(1, 10)  :  &lt;class &#39;range&#39;&gt;
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2"> </span><span class="si">{:s}</span><span class="s2">&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.56789</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;$</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;today is a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;monday&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;today is a </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">intlist</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13438,7 +13625,7 @@ qik
 True
 0.568 hello
 $0.50
-today is a monday
+today is a [1, 2, 3, 4]
 </pre>
 </div>
 </div>
@@ -13456,7 +13643,7 @@ today is a monday
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -13464,7 +13651,6 @@ today is a monday
 <span class="n">intDict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s2">&quot;three&quot;</span><span class="p">}</span>
 <span class="n">idString</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">intDict</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">idString</span><span class="p">))</span>
-
 <span class="n">intDict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">idString</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">intDict</span><span class="p">))</span>
 
@@ -13473,10 +13659,6 @@ today is a monday
 
 <span class="c1"># Values of intDict</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">intDict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Retrieve all values using keys ---&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">intDict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">intDict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13497,7 +13679,39 @@ today is a monday
 &lt;class &#39;dict&#39;&gt;
 dict_keys([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;])
 dict_values([&#39;one&#39;, &#39;two&#39;, &#39;three&#39;])
+</pre>
+</div>
+</div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Retrieve all values using keys ---&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">intDict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">intDict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
 --- Retrieve all values using keys ---
 one
 two
@@ -13512,7 +13726,7 @@ three
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Multi-layer Dictionary Data</span>
@@ -13526,7 +13740,8 @@ three
 
 <span class="nb">print</span><span class="p">(</span><span class="n">employee</span><span class="p">[</span><span class="s2">&quot;Phone&quot;</span><span class="p">][</span><span class="s2">&quot;House&quot;</span><span class="p">])</span>
 
-<span class="n">employee</span><span class="p">[</span><span class="s2">&quot;Phone&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="c1"># employee[&quot;First Name&quot;]</span>
+<span class="n">employee</span><span class="p">[</span><span class="s2">&quot;Phone&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13550,13 +13765,13 @@ three
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>dict_keys([&#39;House&#39;, &#39;Office&#39;, &#39;Handphone&#39;])</pre>
+<pre>{&#39;House&#39;: 65346543, &#39;Office&#39;: 67896789, &#39;Handphone&#39;: 98769876}</pre>
 </div>
 
 </div>
@@ -13589,11 +13804,13 @@ three
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># List datatype</span>
 <span class="n">integers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The length of the list is: &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">integers</span><span class="p">))</span>
 
 <span class="c1">## Getting elements directly from the list</span>
@@ -13616,7 +13833,8 @@ three
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The length of the list is:  6
+<pre>[1, 2, 3, 4, 5, 6, 7]
+The length of the list is:  7
 
 ---Getting elements directly from the list---
 1
@@ -13625,6 +13843,7 @@ three
 4
 5
 6
+7
 </pre>
 </div>
 </div>
@@ -13635,12 +13854,12 @@ three
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Getting elements from their index with Range()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---Getting elements from a list using index---&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">integers</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">integers</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> : </span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">integers</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 </pre></div>
 
@@ -13666,6 +13885,7 @@ three
 3 : 4
 4 : 5
 5 : 6
+6 : 7
 </pre>
 </div>
 </div>
@@ -13676,7 +13896,40 @@ three
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">integers</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[7, 6, 5, 4, 3, 2, 1]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## List vs arrays</span>
@@ -13703,8 +13956,25 @@ three
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 ---Divide integer list by 2---
-Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-63-b2550bc3bc91&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;\n---Divide integer list by 2---&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>integers<span class="ansi-yellow-intense-fg ansi-bold">/</span><span class="ansi-cyan-intense-fg ansi-bold">2</span>
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;</pre>
 </div>
 </div>
 
@@ -13714,7 +13984,7 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13740,7 +14010,7 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 ---Convert integer list to array then divide by 2---
-[0.5 1.  1.5 2.  2.5 3. ]
+[0.5 1.  1.5 2.  2.5 3.  3.5]
 &lt;class &#39;numpy.ndarray&#39;&gt;
 </pre>
 </div>
@@ -13752,7 +14022,7 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---Divide integer list by 2 with List Comprehension---&quot;</span><span class="p">)</span>
@@ -13777,7 +14047,7 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 ---Divide integer list by 2 with List Comprehension---
-[0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+[0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5]
 &lt;class &#39;list&#39;&gt;
 [1.0, 2.0, 3.0]
 </pre>
@@ -13790,14 +14060,45 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">integers</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 4, 9, 16, 25, 36, 49]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Obtaining the last value can be done thru the use of negative index&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">integers</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
 </pre></div>
 
     </div>
@@ -13816,10 +14117,10 @@ Exception unsupported operand type(s) for /: &#39;list&#39; and &#39;int&#39;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Obtaining the last value can be done thru the use of negative index
-[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6, 7]
+7
 6
-5
-[5, 6]
+[5, 6, 7]
 </pre>
 </div>
 </div>
@@ -13830,10 +14131,10 @@ Obtaining the last value can be done thru the use of negative index
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">integers</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">integers</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13846,13 +14147,13 @@ Obtaining the last value can be done thru the use of negative index
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[70]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;1,2,3,4,5,6&#39;</pre>
+<pre>&#39;1, 2, 3, 4, 5, 6, 7&#39;</pre>
 </div>
 
 </div>
@@ -13883,12 +14184,12 @@ Obtaining the last value can be done thru the use of negative index
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For loop focuses on iterations</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
@@ -13906,7 +14207,8 @@ Obtaining the last value can be done thru the use of negative index
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
+<pre>0
+1
 2
 3
 4
@@ -13925,7 +14227,7 @@ Obtaining the last value can be done thru the use of negative index
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># While loop focuses on the given condition (boolean expression)</span>
@@ -13933,7 +14235,7 @@ Obtaining the last value can be done thru the use of negative index
 <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -13969,7 +14271,7 @@ Obtaining the last value can be done thru the use of negative index
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
@@ -14088,7 +14390,7 @@ in outer loop
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
@@ -14096,7 +14398,7 @@ in outer loop
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In if stmt&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in else&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     
 <span class="n">factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -14116,11 +14418,11 @@ in outer loop
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>in else
-in else
-in else
-in else
-in else
+<pre>6
+5
+4
+3
+2
 In if stmt
 </pre>
 </div>
@@ -14128,7 +14430,7 @@ In if stmt
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[79]:</div>
 
 
 
@@ -14152,7 +14454,7 @@ In if stmt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">combination</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
@@ -14178,15 +14480,15 @@ In if stmt
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>in else
-in else
-in else
-in else
+<pre>5
+4
+3
+2
 In if stmt
-in else
-in else
+3
+2
 In if stmt
-in else
+2
 In if stmt
 </pre>
 </div>
@@ -14194,7 +14496,7 @@ In if stmt
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[81]:</div>
 
 
 
@@ -14272,7 +14574,7 @@ So I&#39;ma light it up like dynamite, whoa oh oh
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Dynamite.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
@@ -14281,6 +14583,7 @@ So I&#39;ma light it up like dynamite, whoa oh oh
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File closed? &quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">File closed? &quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14306,6 +14609,8 @@ Shining through the city with a little funk and soul
 So I&#39;ma light it up like dynamite, whoa oh oh
 
 File closed?  False
+
+File closed?  True
 </pre>
 </div>
 </div>
@@ -14332,7 +14637,7 @@ File closed?  False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
@@ -14343,9 +14648,12 @@ File closed?  False
         <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Appending text ---&quot;</span><span class="p">)</span>        
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Now the file has more content!&quot;</span><span class="p">)</span>
-<span class="c1"># f.close()</span>
+<span class="c1">#f = open(&quot;./Hello World.txt&quot;, &quot;a&quot;)</span>
+<span class="c1">#f.write(&quot;Now the file has more content!&quot;)</span>
+<span class="c1">#f.close()</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
+    <span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Now the file has more content!&quot;</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">in_file</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">in_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
@@ -14353,7 +14661,7 @@ File closed?  False
         
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Overwrite---&quot;</span><span class="p">)</span>        
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
-    <span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, this is just some random text</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, I have overwritten this file</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Hello World.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">in_file</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">in_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
@@ -14379,9 +14687,10 @@ File closed?  False
 --- Appending text ---
 Hello, this is just some random text
 
+Now the file has more content!
 
 --- Overwrite---
-Hello, this is just some random text
+Hello, I have overwritten this file
 
 </pre>
 </div>
@@ -14403,7 +14712,7 @@ Hello, this is just some random text
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Printed file.txt&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -14432,6 +14741,8 @@ Hello, this is just some random text
 
 This is an alternative method to writing an output
 
+This is an alternative method to writing an output
+
 </pre>
 </div>
 </div>
@@ -14449,7 +14760,7 @@ This is an alternative method to writing an output
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14468,7 +14779,7 @@ This is an alternative method to writing an output
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[90]:</div>
 
 
 
@@ -14757,10 +15068,10 @@ This is an alternative method to writing an output
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]}</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;col_3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;col_1&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="n">df</span>
@@ -14776,7 +15087,7 @@ This is an alternative method to writing an output
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[98]:</div>
 
 
 
@@ -14828,6 +15139,12 @@ This is an alternative method to writing an output
       <td>0</td>
       <td>d</td>
       <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>e</td>
+      <td>2</td>
     </tr>
   </tbody>
 </table>
@@ -14891,7 +15208,7 @@ This is an alternative method to writing an output
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Summing up down the column ----&quot;</span><span class="p">)</span>
@@ -15048,10 +15365,10 @@ dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;col_1&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;col_1&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -15064,13 +15381,13 @@ dtype: float64
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[109]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
+<pre>pandas.core.series.Series</pre>
 </div>
 
 </div>
@@ -15081,7 +15398,7 @@ dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;col_1&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
@@ -15097,7 +15414,7 @@ dtype: float64
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[99]:</div>
 
 
 
@@ -15132,6 +15449,12 @@ dtype: float64
       <td>c</td>
       <td>2</td>
     </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>e</td>
+      <td>2</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -15145,7 +15468,7 @@ dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
@@ -15170,6 +15493,7 @@ dtype: float64
 1      2      4
 2      1      2
 3      0      0
+4      1      2
 </pre>
 </div>
 </div>
@@ -15180,7 +15504,7 @@ dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="s2">&quot;Jerry&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">]</span>
@@ -15210,7 +15534,7 @@ dtype: float64
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[104]:</div>
 
 
 
@@ -15230,7 +15554,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]})</span>
@@ -15246,7 +15570,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[107]:</div>
 
 
 
@@ -15382,7 +15706,7 @@ Exceptions caught successfully, program still runs -- 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
@@ -15401,7 +15725,7 @@ Exceptions caught successfully, program still runs -- 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -15411,6 +15735,7 @@ Exceptions caught successfully, program still runs -- 1
     <span class="n">summ</span><span class="p">,</span> <span class="n">avg</span> <span class="o">=</span> <span class="n">aggregate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">summ</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15429,6 +15754,7 @@ Exceptions caught successfully, program still runs -- 1
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(3, 1.5)
 3
+1.5
 </pre>
 </div>
 </div>
@@ -15449,6 +15775,7 @@ Exceptions caught successfully, program still runs -- 1
 <li><strong>has-a</strong> relationship is an object being a property of another object (e.g. a guard has a weapon)</li>
 </ul>
 </li>
+<li>By using the <strong>super()</strong> function, the child class will automatically inherit the methods and properties from its parent.</li>
 </ul>
 
 </div>
@@ -15456,7 +15783,7 @@ Exceptions caught successfully, program still runs -- 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Weapon</span><span class="p">:</span>
@@ -15476,7 +15803,7 @@ Exceptions caught successfully, program still runs -- 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Guard</span><span class="p">:</span>
@@ -15544,7 +15871,7 @@ Exceptions caught successfully, program still runs -- 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating objects</span>
@@ -15561,8 +15888,8 @@ Exceptions caught successfully, program still runs -- 1
 <span class="nb">print</span><span class="p">(</span><span class="n">Blaze2</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
 
 <span class="c1"># Mutable Version (Bad Practise)</span>
-<span class="c1"># Blaze.modifyRange(3)</span>
-<span class="c1"># Blaze.toString()</span>
+<span class="c1">#Blaze.modifyRange(3)</span>
+<span class="c1">#print(Blaze.toString())</span>
 </pre></div>
 
     </div>
@@ -15614,20 +15941,21 @@ Attack Type: AoE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">guardList</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Astesia</span><span class="p">)</span>
+
 <span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">SilverAsh</span><span class="p">)</span>
 <span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Lappaland</span><span class="p">)</span>
 <span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Blaze</span><span class="p">)</span>
 <span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Specter</span><span class="p">)</span>
+<span class="n">guardList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Astesia</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">guard</span> <span class="ow">in</span> <span class="n">guardList</span><span class="p">:</span>
     <span class="c1"># print(guard.toString()) # Polymorphism</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">guard</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span> <span class="c1"># Inheritance</span>
-    <span class="c1"># print(guard.getType()) # This will bomb - there is no getType in the super class guard</span>
+    <span class="c1"># print(guard.getName()) # Inheritance</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">guard</span><span class="o">.</span><span class="n">getType</span><span class="p">())</span> <span class="c1"># This will bomb - there is no getType in the super class guard</span>
 </pre></div>
 
     </div>
@@ -15644,12 +15972,29 @@ Attack Type: AoE
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Astesia
-SilverAsh
-Lappaland
-Blaze
-Specter
+<pre>Single Target
+Single Target
+AoE
+AoE
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-135-ca1cc0391a1d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">     10</span>     <span class="ansi-red-intense-fg ansi-bold"># print(guard.toString()) # Polymorphism</span>
+<span class="ansi-green-fg">     11</span>     <span class="ansi-red-intense-fg ansi-bold"># print(guard.getName()) # Inheritance</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 12</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>guard<span class="ansi-yellow-intense-fg ansi-bold">.</span>getType<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-red-intense-fg ansi-bold"># This will bomb - there is no getType in the super class guard</span>
+
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;Guard&#39; object has no attribute &#39;getType&#39;</pre>
 </div>
 </div>
 
@@ -15669,11 +16014,11 @@ Specter
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Blaze</span><span class="o">.</span><span class="n">atkRange</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Blaze</span><span class="o">.</span><span class="n">getRange</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Blaze</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Broca&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Blaze</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -15690,9 +16035,108 @@ Specter
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-2
+<pre>Broca
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Astesia</span> <span class="o">=</span> <span class="n">Guard</span><span class="p">(</span><span class="s2">&quot;Astesia&quot;</span><span class="p">,</span> <span class="n">Weapon</span><span class="p">(</span><span class="s2">&quot;Sword&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Astesia</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Operator: Astesia
+Weapon: Sword
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">----&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\----
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-148-a6f1987f81d0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>int<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;hello&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: invalid literal for int() with base 10: &#39;hello&#39;</pre>
 </div>
 </div>
 

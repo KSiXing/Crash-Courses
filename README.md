@@ -7,16 +7,6 @@ The repository houses codes which can help introduce programming to others.
 - These are some other guides which may be useful in your coding journey
 
 <details>
-<summary>Using Git</summary>
-
-### What is it?
-- Git is a software used for version tracking, as well as collaboration among programmers during software development. 
-
-Link to guide on using git: [GitGuide](./Guides/GitGuide.md)
-
-</details>
-
-<details>
 <summary>Adding Kernels to IPYNB</summary>
 
 ### What is it?
@@ -26,6 +16,17 @@ Link to guide on using git: [GitGuide](./Guides/GitGuide.md)
 Link to guide on adding new kernels to IPYNB: [Add Kernels to Jupyter Notebook](./Guides/Add%20Kernels%20to%20Jupyter%20Notebook.md)
 
 </details>
+
+<details>
+<summary>Using Git</summary>
+
+### What is it?
+- Git is a software used for version tracking, as well as collaboration among programmers during software development. 
+
+Link to guide on using git: [GitGuide](./Guides/GitGuide.md)
+
+</details>
+
 
 ## Sorting Algorithms
 - There are implementations of sorting algorithms in this repository
