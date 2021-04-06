@@ -1,6 +1,6 @@
 # Crash Courses
 
-The repository houses codes which can help introduce programming to others.
+This repository aims to help beginners to have a basic understand on programming and coding.
 
 ## Other Guides
 

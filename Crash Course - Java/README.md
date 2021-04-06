@@ -19,7 +19,7 @@
 
 ### How it works 
 - Abstraction as an OOP concept in Java works by letting programmers create useful, reusable tools. 
-- For instance, we have a Module and a Student class. A module can have many students. The lecturer in charge of the module may only need to know the name of the students, he does not need to know what other module that student is enrolled in as well. As such, we can specify a Student::getName() method in the Student class in the Module class. The module class should not be able to access all other attributes pertaining to the Student class like his age, personal details or the other modules he is doing
+- For instance, we have a Module and a Student class. A module can have many students. The lecturer in charge of the module may only need to know the name of the students, he does not need to know what other module that student is enrolled in as well. As such, we can specify a `Student::getName` method in the Student class in the Module class. The module class should not be able to access all other attributes pertaining to the Student class like his age, personal details or the other modules he is doing
 </details>
 
 <details>
@@ -64,8 +64,7 @@ This Java OOP concept lets programmers use the same word to mean different thing
   habit to add a `@Override` annotation to allow the compiler to check if overriding is indeed happening. Overriden
   methods must have the same method signatures as the method it is overriding from its parent.
 - Method overloading is when there are more than one functions of the same name, but each of those functions 
-  have different parameters. For example foo(int a, int b) and foo(double a, double b) is an example of 
-  overloaded methods.
+  have different parameters. For example foo(int a, int b) and foo(double a, double b) is an example of overloaded methods.
 
 ## Inheritance vs Composition
 - **Inheritance** is an **"is-a"** relationship while **Composition** is a **"has-a"** relationship
@@ -144,3 +143,38 @@ public class Party {
 	}
 }
 ~~~
+
+## Functional Programming (FP) Principles
+<details>
+<summary>Immutability</summary>
+
+### What is it?
+Immutability means that once, you assigned a value to that variable, it can no longer be changed. 
+
+### How it works?
+When we initialize a variable or object, it is effectively final if we do not change it. All variables must be final or effectively final if they are to be used in lambda expressions, annoymous classes or inner classes. One way to make a variable immutable is through the use of the `final` keyword.
+
+</details>
+
+<details>
+<summary>Pure Functions and No Side Effects</summary>
+
+### What is it?
+A pure function is one that returns the same output for the same given input. It is free from side effects such as `System.out::println`
+
+</details>
+
+
+<details>
+<summary>First Class Functions and Higher Order Functions</summary>
+
+### What is it?
+First Class Functions are functions that are treated like objects. Higher Order Functions are functions that can take in at least one First Class Function as an argument or return a First Class Function
+
+### How it works 
+
+
+</details>
+
+## Lazy Evalutaion and Streams
+
