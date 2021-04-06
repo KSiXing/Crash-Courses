@@ -47,7 +47,7 @@ if __name__ == '__main__':
 </details>
 
 <details>
-<summary>self parameter</summary>
+<summary>The "self" parameter</summary>
 
 ### What is it?
 - This keyword is to signify the current instance of the class. It is similar to the `this` keyword in Java. Without the self, doing `hero1.attack()` will result in the error that you have one less positional argument (parameter) being parsed into the method
@@ -138,9 +138,9 @@ Consider the following using `abs` function in python
 
 in general x -> x and -x -> x
 
--1 -> 1
- 2 -> 2
--3 -> 3
+- -1 -> 1
+-  2 -> 2
+- -3 -> 3
 
 ~~~python
 # Given a list l
