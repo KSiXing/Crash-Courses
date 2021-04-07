@@ -1,6 +1,6 @@
 # Crash Courses
 
-This repository aims to help beginners to have a basic understand on programming and coding.
+This repository aims to help beginners gain a basic understanding in programming and coding
 
 ## Other Guides
 
@@ -21,7 +21,7 @@ Link to guide on adding new kernels to IPYNB: [Add Kernels to Jupyter Notebook](
 
 - Git is a software used for version tracking, as well as collaboration among programmers during software development. 
 
-Link to guide on using git: [GitGuide](./Guides/GitGuide.md)
+Link to guide on using Git: [GitGuide](./Guides/GitGuide.md)
 
 </details>
 
@@ -29,6 +29,8 @@ Link to guide on using git: [GitGuide](./Guides/GitGuide.md)
 ## Sorting Algorithms
 - There are implementations of sorting algorithms in this repository
 - The list of sorting algorithms available are listed below
+- For comparison based sorting, the best case time complexity will be O(N log N)
+- For non-comparison based sorting (i.e radix sort) will run in O(N) time complexity
 
 | Algorithm | File |
 | ---		 	| ----	  |

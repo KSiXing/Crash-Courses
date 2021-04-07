@@ -4,8 +4,11 @@
 ## What is Python
 - Python is an interpreted, high level programming language. It supports various Programming Paradigms - Procedural, Object-Oriented and Functional
 
-### Python 2 vs Python 3
+## Python 2 vs Python 3
 - Python 2 is considered a legacy language and most packages do not support Python 2 especially for Data Science and AI. Python 3 is also much easier to learn as compared to Python 2.
+
+## Python in Competitive Programming
+Python is one of the 3 top languages used in competitive programming, the other 2 being C++ and Java. However, as compared to C++ or Java, it is a much slower and would not clear the challenge if the focus is on speed. Python uses Dynamic typing and it is an intepreted language, thus making it slower than its compiled counterparts such as Java and C++. With that being said, C++ remains the top choice for competitive programmers given its speed advantage over most other languages. A programmer can still manage competitive programmer challenges simply with Java but if he/she is only familiar with Python, there will be cases in which they may not be able to solve certain challenges at all.
 
 ## Object Oriented Programming (OOP) In Python
 
@@ -95,12 +98,32 @@ sum = lambda x, y : x + y
 <summary>Higher Order Function</summary>
 
 ### What is it?
-- Allows a function to be parsed as a parameter into another function
+- Allows a function to be parsed as a parameter into another function, or a function can be returned
 
 ### How it works 
 
 ~~~python
+# Parsing a function as a parameter
+from functools import reduce
 
+factorial = lambda x,y : x * y
+
+def combination(n, r, factorial):
+	numerator = reduce(factorial, range(1, n+1))
+	denominator = reduce(factorial, range(1, n - r + 1)) * reduce(factorial, range(1, r + 1))
+	return int(numerator/denominator)
+
+combination(5,2,factorial) # Output is 10
+
+# Returning a function
+def create_sum(x): 
+    def sum(y): 
+        return x + y 
+    
+    return sum 
+    
+sum_5 = create_sum(5) 
+sum_5(10) # Output is 15
 ~~~
 
 </details>
@@ -157,6 +180,7 @@ list(map(abs,l))
 
 ### What is it?
 - Reduces all values in an iterable down to a single value based on the given function
+- Need to import from `functools` package first
 
 ### How it works 
 
