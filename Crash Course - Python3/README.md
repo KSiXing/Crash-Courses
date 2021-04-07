@@ -8,7 +8,7 @@
 - Python 2 is considered a legacy language and most packages do not support Python 2 especially for Data Science and AI. Python 3 is also much easier to learn as compared to Python 2.
 
 ## Python in Competitive Programming
-Python is one of the 3 top languages used in competitive programming, the other 2 being C++ and Java. However, as compared to C++ or Java, it is much slower and would not clear the challenge if the focus is on speed. Python uses Dynamic typing and it is an intepreted language, thus making it slower than its compiled counterparts such as C++ or Java. With that being said, C++ remains the top choice for competitive programmers given its speed advantage over most other languages. A programmer can still manage competitive programming challenges simply with Java but if he/she is only familiar with Python, there will be cases in which he/she may not be able to solve certain challenges at all.
+Python is one of the top 3 languages used in competitive programming, the other 2 being C++ and Java. However, as compared to C++ or Java, it is much slower and would not clear the challenge if the focus is on speed. Python uses dynamic typing and it is an intepreted language, thus making it slower than its compiled counterparts such as C++ or Java. With that being said, C++ remains the top choice for competitive programmers given its speed advantage over most other languages. A programmer can still manage competitive programming challenges simply with Java but if he/she is only familiar with Python, there will be cases in which he/she may not be able to solve certain challenges at all.
 
 ## Object Oriented Programming (OOP) In Python
 
@@ -152,7 +152,8 @@ list(filter(lambda x : x % 2 == 0,l))
 <summary>map function</summary>
 
 ### What is it?
-- Works like an if statement that selects only elements that passes the predicate
+- Assumption is that all elements in a domain has been mapped to an element in the co-domain. 
+- When the map function is called, the value being parse into the map function will have its corresponding value in the co-domain returned
 
 ### How it works 
 It will map an object of the Domain to Co-Domain
