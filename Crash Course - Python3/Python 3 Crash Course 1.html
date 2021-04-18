@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>temp-161871717762711236</title>
+<title>temp-161876138690859027</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13794,7 +13794,7 @@ three
 <li>List index always starts from 0 not 1 for most languages (i.e. Java, Python, C)</li>
 <li>There are languages which starts from 1 (i.e. R) - <strong>Be aware of which index does the language start with</strong></li>
 <li>Using range() to access list from its index is inclusive of the start value and exclusive of the end value <ul>
-<li>i.e. to get all elements from a list with its index, it would be 0 $\leq$ x $&lt;$ 6 for the below example</li>
+<li>i.e. to get all elements from a list with its index, it would be 0 $\leq$ x $\lt$ 7 for the below example</li>
 </ul>
 </li>
 </ul>
@@ -15876,7 +15876,7 @@ Exceptions caught successfully, program still runs -- 1
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         
-    <span class="k">def</span> <span class="nf">toString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 
@@ -15902,10 +15902,10 @@ Exceptions caught successfully, program still runs -- 1
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
     
     <span class="k">def</span> <span class="nf">getWeapon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weapon</span><span class="o">.</span><span class="n">toString</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weapon</span>
         
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;Operator: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">Weapon: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weapon</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span> 
+        <span class="k">return</span> <span class="s2">&quot;Operator: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">Weapon: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weapon</span><span class="p">)</span> 
     
 <span class="k">class</span> <span class="nc">RangedGuard</span><span class="p">(</span><span class="n">Guard</span><span class="p">):</span>
     <span class="n">atkRange</span> <span class="o">=</span> <span class="mi">0</span>
@@ -16224,19 +16224,6 @@ Weapon: Sword
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
