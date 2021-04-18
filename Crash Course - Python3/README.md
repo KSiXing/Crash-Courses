@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
 </details>
 
-## Functional Programming
+## Functional Programming in Python
 
 <details>
 <summary>lambda expressions</summary>
@@ -153,7 +153,7 @@ list(filter(lambda x : x % 2 == 0,l))
 
 ### What is it?
 - Assumption is that all elements in a domain has been mapped to an element in the co-domain. 
-- When the map function is called, the value being parse into the map function will have its corresponding value in the co-domain returned
+- When the map function is called, the value being parsed into the map function will have its corresponding value in the co-domain returned
 
 ### How it works 
 It will map an object of the Domain to Co-Domain
