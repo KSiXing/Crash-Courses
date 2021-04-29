@@ -90,3 +90,18 @@ if there are conflicts
 ```bash
 git pull --no-edit origin master
 ```
+
+in order to resolve conflict
+```bash
+git fetch [remote-name]
+git checkout [remote-name] / branchname
+```
+- Edits the conflicts locally
+```bash
+git fetch [remote-name]
+git checkout [remote-name]/master
+git merge-no-ff branchname
+git add .
+git commit -m "some msg"
+git push [remote-name] master
+```

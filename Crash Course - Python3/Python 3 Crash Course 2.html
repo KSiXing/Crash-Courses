@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>temp-161876141775403542</title>
+<title>Python 3 Crash Course 2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13859,7 +13859,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;generator object &lt;genexpr&gt; at 0x00000194F2953660&gt;</pre>
+<pre>&lt;generator object &lt;genexpr&gt; at 0x000001468DAAA660&gt;</pre>
 </div>
 
 </div>
@@ -13943,8 +13943,8 @@ Size of Generator Comprehension :	 112
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Time taken for List Comprehension :		 7.6701561
-Time taken for Generator Comprehension :	 1.066401899999999
+<pre>Time taken for List Comprehension :		 7.7746911999999995
+Time taken for Generator Comprehension :	 1.1282987000000002
 </pre>
 </div>
 </div>
@@ -14079,6 +14079,241 @@ Time taken for Generator Comprehension :	 1.066401899999999
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Decorator">Decorator<a class="anchor-link" href="#Decorator">&#182;</a></h2><ul>
+<li>Another way of customising functions to cater to lazy evaluation is through the use of <code>Decorators</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Built-in-Functions">Built-in Functions<a class="anchor-link" href="#Built-in-Functions">&#182;</a></h2><ul>
+<li><p>Apart from writing your own functions, python does provide some functions that cater to lazy evaluation such as <code>range</code>, <code>map</code>, <code>open</code>, <code>zip</code></p>
+</li>
+<li><p>Since the first 3 functions have already been explained in detail, this segment will only be discussing <code>zip</code> and <code>enumerate</code>.</p>
+<ul>
+<li><code>zip</code> function allows for parallel iteration, ideally for iterables of the same length</li>
+<li>If the iterables are of different length, it will end at the shortest of all the iterables. The remaining values will be ignored</li>
+<li>If the values that will be ignored are important, use the <code>itertools::zip_longest</code> function instead. The missing values will be padded with the <code>fillvalue</code> argument you assign (or default to None)</li>
+<li><code>enumerate</code> adds a counter to all items in an iterable. The default start value is 0</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ideal case, both list are of the same length</span>
+
+<span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">letterlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">intlist</span><span class="p">,</span><span class="n">letterlist</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(1, &#39;a&#39;), (2, &#39;b&#39;), (3, &#39;c&#39;), (4, &#39;d&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If the lists are of different lengths, additional values of the longer lists will be ignored</span>
+
+<span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">letterlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">intlist</span><span class="p">,</span><span class="n">letterlist</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(1, &#39;a&#39;), (2, &#39;b&#39;), (3, &#39;c&#39;), (4, &#39;d&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use itertools::zip_longest to overcome the issue of being cutoff</span>
+
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">zip_longest</span>
+<span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">letterlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">zip_longest</span><span class="p">(</span><span class="n">intlist</span><span class="p">,</span><span class="n">letterlist</span><span class="p">,</span><span class="n">fillvalue</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(1, &#39;a&#39;), (2, &#39;b&#39;), (3, &#39;c&#39;), (4, &#39;d&#39;), (&#39;X&#39;, &#39;e&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sorting: Only the first value of the zipped set will be used for sorting</span>
+
+<span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">letterlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+
+<span class="n">sort_by_int</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">intlist</span><span class="p">,</span><span class="n">letterlist</span><span class="p">))</span> <span class="c1"># sort by numbers</span>
+<span class="n">sort_by_int</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">sort_by_int</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(1, &#39;d&#39;), (2, &#39;c&#39;), (3, &#39;b&#39;), (4, &#39;a&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">intlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">letterlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+
+<span class="n">sort_by_letter</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">letterlist</span><span class="p">,</span><span class="n">intlist</span><span class="p">))</span> <span class="c1"># sort by letters</span>
+<span class="n">sort_by_letter</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">sort_by_letter</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;a&#39;, 4), (&#39;b&#39;, 3), (&#39;c&#39;, 2), (&#39;d&#39;, 1)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Return-vs-Yield">Return vs Yield<a class="anchor-link" href="#Return-vs-Yield">&#182;</a></h3><ul>
 <li><code>yield</code> evaluates and returns a single value back to the user. When it is called upon again, it will continue where it last left off and evaluates the next value when called upon again</li>
 <li><code>return</code> computes all values at once and sending them back as a list</li>
@@ -14089,7 +14324,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Traditionally, if we use the return keyword, we will return a fully evaluated list</span>
@@ -14114,7 +14349,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14131,7 +14366,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We will look at the idea behind Generators through the use of the yield command</span>
@@ -14154,13 +14389,13 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;generator object square at 0x00000194F2953A50&gt;</pre>
+<pre>&lt;generator object square at 0x000001468DB6F120&gt;</pre>
 </div>
 
 </div>
@@ -14171,7 +14406,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squared</span><span class="p">:</span>
@@ -14210,7 +14445,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Anagram-Problem">Anagram Problem<a class="anchor-link" href="#Anagram-Problem">&#182;</a></h2><ul>
 <li>An anagram is a word that can be rearranged to form a different word (e.g. <em>algorithm</em> and <em>logarithm</em>)</li>
-<li>The idea of how I approached came from tackling a Palindrome, words or sequence of characters that reads the same forward or backwards (e.g. Aibohphobia, Racecar, Madam)</li>
+<li>The idea of how I approached came from tackling a Palindrome, words or sequences of characters that reads the same forward or backwards (e.g. Aibohphobia, Racecar, Madam)</li>
 </ul>
 <h3 id="Stacks-and-Queues">Stacks and Queues<a class="anchor-link" href="#Stacks-and-Queues">&#182;</a></h3><ul>
 <li>To address the palindrome problem, one can simply just use a stack and a queue data structure to check if the characters are the same when removed simultaneously from each of the data structure. If they are the same, one can conclude the word is a palindrome</li>
@@ -14224,7 +14459,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Stack</span>
@@ -14261,7 +14496,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14278,7 +14513,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Queue</span>
@@ -14315,7 +14550,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -14332,7 +14567,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To resolve the Palindrome problem we use both a stack and a queue to see if reading the word forward or reversed </span>
@@ -14347,9 +14582,12 @@ Time taken for Generator Comprehension :	 1.066401899999999
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
         <span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        
+    <span class="n">queue</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span>
     
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="nb">list</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="o">!=</span> <span class="nb">list</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="o">!=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;This is not a Palindrome&quot;</span>
 
     <span class="k">return</span> <span class="s2">&quot;This is a Palindrome&quot;</span>
@@ -14367,7 +14605,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14384,7 +14622,145 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># In order to save time, we only need to verify that the characters are the same up till the middle using the same approach</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Given a String of size N, the time complexity will be O(N/2) which is still O(N) but will be faster than O(N)</span>
+
+<span class="sd">For strings with even length (e.g 12344321) it will be floor(8 / 2)</span>
+
+<span class="sd">If the string is of odd length (e.g. Aibohphobia), just check all the way to one less than the middle since the </span>
+<span class="sd">middle character can be anything and it will still be a palindrome. So it will still be floor(11/2)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">def</span> <span class="nf">checkPalindrome</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">queue</span> <span class="o">=</span> <span class="n">word</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="n">word</span>
+    
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        
+    <span class="n">queue</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="o">!=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;This is not a Palindrome&quot;</span>
+
+    <span class="k">return</span> <span class="s2">&quot;This is a Palindrome&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkPalindrome</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;This is a Palindrome&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkPalindrome</span><span class="p">(</span><span class="s2">&quot;aibohphobia&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;This is a Palindrome&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkPalindrome</span><span class="p">(</span><span class="s2">&quot;notPalindrome&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;This is not a Palindrome&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To resolve the anagram, we first check if the length of the words are the same</span>
@@ -14417,7 +14793,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -14434,7 +14810,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">isAnagram</span><span class="p">(</span><span class="s2">&quot;aaabb&quot;</span><span class="p">,</span> <span class="s2">&quot;ababa&quot;</span><span class="p">)</span>
@@ -14450,7 +14826,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -14467,7 +14843,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">isAnagram</span><span class="p">(</span><span class="s2">&quot;aaabb&quot;</span><span class="p">,</span> <span class="s2">&quot;aabbb&quot;</span><span class="p">)</span>
@@ -14483,7 +14859,7 @@ Time taken for Generator Comprehension :	 1.066401899999999
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 

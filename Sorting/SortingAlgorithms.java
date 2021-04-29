@@ -79,14 +79,13 @@ class InsertionSort extends Sort {
     @Override
     public int[] sort() {
         int n = this.integers.length;
-        int comparison = 0;
+
         for (int i = 1; i < n; i++) {
             int next = integers[i];
 
             int j;
             for (j = i - 1; j >= 0 && integers[j] > next; j--) {
                 integers[j + 1] = integers[j];
-                comparison++;
             }
             integers[j + 1] = next;
 
@@ -94,13 +93,7 @@ class InsertionSort extends Sort {
             System.out.println(Arrays.toString(integers) + "\n");
         }
 
-        printStatistics(comparison);
         return integers;
-    }
-
-    private void printStatistics(int comparisons) {
-        System.out.println("\n---- Statistics for Insertion Sort ----");
-        System.out.println("Comparisons\t:\t" + comparisons);
     }
 
 }
