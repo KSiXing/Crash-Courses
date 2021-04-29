@@ -30,7 +30,7 @@ Link to guide on using Git: [GitGuide](./Guides/GitGuide.md)
 - There are implementations of sorting algorithms in this repository
 - The list of sorting algorithms available are listed below
 - For comparison based sorting, the best case time complexity will be O(N log N)
-- For non-comparison based sorting (i.e radix sort) will run in O(N) time complexity
+- For non-comparison based sorting (i.e radix sort) will have a runtime complexity of O(N)
 
 | Algorithm | File |
 | ---		 	| ----	  |
