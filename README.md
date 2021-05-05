@@ -31,10 +31,12 @@ Link to guide on using Git: [GitGuide](./Guides/GitGuide.md)
 - The list of sorting algorithms available are listed below
 - For comparison based sorting, the best case time complexity will be O(N log N)
 - For non-comparison based sorting (i.e radix sort) will have a runtime complexity of O(N)
+- For Counting Sort, both the time and space complexity will be O(N + K)
 
 | Algorithm | File |
 | ---		 	| ----	  |
 | Bubble Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
+| Counting Sort | [CountingSortTest](./Sorting/CountingSortTest.java) |
 | Insertion Sort 	| [SortingAlgorithms](./Sorting/SortingAlgorithms.java) |
 | Merge Sort 	| [Comparison_Recursive_Sort](./Sorting/Comparison_Recursive_Sort.java) |
 | Quick Sort 	| [Comparison_Recursive_Sort](./Sorting/Comparison_Recursive_Sort.java) |

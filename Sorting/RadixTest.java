@@ -2,7 +2,7 @@
  *
  * @author KohSiXing
  *
- * This is a test for radix sort using integers
+ * This is a test for radix sort using positive integers
  *
  */
 
