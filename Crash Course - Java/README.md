@@ -173,8 +173,52 @@ First Class Functions are functions that are treated like objects. Higher Order 
 
 ### How it works 
 
+~~~java
+import java.util.function.Function;
+ 
+Function<Integer, Integer> square = x -> x * x;
+
+public int sum_of_square(Function<Integer, Integer> square, int x, int y) {
+		int x_square = square.apply(x);
+		int y_square = square.apply(y);
+		return x_square + y_square;
+}
+~~~
+
 
 </details>
 
 ## Lazy Evalutaion and Streams
 
+<details>
+<summary>Lazy Evaluation</summary>
+
+### What is it?
+Lazy Evaluation is to evaluate what is necesary and at the very last moment. This is most commonly implemented using `Streams` or `Supplier`
+
+</details>
+
+<details>
+<summary>Streams</summary>
+
+### What is it?
+Streams represents a sequence of elements and supports various operations. Stream operation can either be intermediate or terminal. Intermediate operations return a stream and futher operations can be made on that stream. On the other hand, terminal operation return either a void or non-stream result. Examples of terminal operations includes `forEach`, `reduce`, `count`. 
+
+### How it works 
+
+~~~java
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
+List<Integer> intlist = Arrays.asList(0, 1, 2, 5, 6, 3, 4);
+
+intlist
+   .stream()
+   .filter(x -> x % 2 == 0)  // Take only even numbers
+   .map(x -> x * 2) 				 // Multiply the even values by 2
+   .reduce((x,y) -> x + y)   // Sum up all the values
+   .orElse(0);
+~~~
+
+</details>
