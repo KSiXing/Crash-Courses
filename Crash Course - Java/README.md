@@ -160,7 +160,7 @@ When we initialize a variable or object, it is effectively final if we do not ch
 <summary>Pure Functions and No Side Effects</summary>
 
 ### What is it?
-A pure function is one that returns the same output for the same given input. It is free from side effects such as `System.out::println`
+A pure function is one that returns the same output for the same given input. It is free from side effects such as `System.out::println`. Side effects can be the modification of attributes in the program not contained within the function, which includes changing the value of a global variable or the use of I/O streams.
 
 </details>
 
@@ -216,7 +216,7 @@ List<Integer> intlist = Arrays.asList(0, 1, 2, 5, 6, 3, 4);
 intlist
    .stream()
    .filter(x -> x % 2 == 0)  // Take only even numbers
-   .map(x -> x * 2) 				 // Multiply the even values by 2
+   .map(x -> x * 2) 		// Multiply the even values by 2
    .reduce((x,y) -> x + y)   // Sum up all the values
    .orElse(0);
 ~~~

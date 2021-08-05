@@ -75,7 +75,7 @@ if __name__ == '__main__':
 ## Functional Programming in Python
 
 <details>
-<summary>lambda expressions</summary>
+<summary>Lambda Expressions</summary>
 
 ### What is it?
 - This function has its roots based on lambda calculus. It allows programmers to create 
@@ -129,7 +129,7 @@ sum_5(10) # Output is 15
 </details>
 
 <details>
-<summary>filter function</summary>
+<summary>Filter Function</summary>
 
 ### What is it?
 - Works like an if statement that selects only elements that passes the predicate
@@ -149,7 +149,7 @@ list(filter(lambda x : x % 2 == 0,l))
 </details>
 
 <details>
-<summary>map function</summary>
+<summary>Map Function</summary>
 
 ### What is it?
 - Assumption is that all elements in a domain has been mapped to an element in the co-domain. 
@@ -177,7 +177,7 @@ list(map(abs,l))
 </details>
 
 <details>
-<summary>reduce function</summary>
+<summary>Reduce Function</summary>
 
 ### What is it?
 - Reduces all values in an iterable down to a single value based on the given function
@@ -193,5 +193,3 @@ reduce(lambda x,y : x * y, range(1,7))
 ~~~
 
 </details>
-
-
